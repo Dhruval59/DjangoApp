@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Run the Docker container from the built image
-                    docker.image('my-docker-image').run('-p 8000:8000')
+                    docker.image('my-docker-image').run('-p 8002:8002')
                 }
             }
         }
