@@ -29,13 +29,13 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Clean up: Stop and remove the Docker container
-            script {
-                docker.image('my-docker-image').stop()
-                // docker.container('my-container').remove(force: true)
-            }
-        }
-    }
+    // post {
+    //     always {
+    //         // Clean up: Stop and remove the Docker container
+    //         script {
+    //             docker.image('my-docker-image').stop()
+    //             // docker.container('my-container').remove(force: true)
+    //         }
+    //     }
+    // }
 }
