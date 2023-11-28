@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     // Run the Docker container from the built image
-                    docker.image('my-docker-image').run('-p 8000:8000', '--name my-container')
+                    docker.image('my-docker-image').run('-p 8000:8000')
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
             // Clean up: Stop and remove the Docker container
             script {
                 docker.image('my-docker-image').stop()
-                docker.container('my-container').remove(force: true)
+                // docker.container('my-container').remove(force: true)
             }
         }
     }
